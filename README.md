@@ -3,6 +3,10 @@
 > **Sitio web elegante y minimalista para servicios de domótica y automatización inteligente**
 
 ![Zonit Preview](https://img.shields.io/badge/ZONIT-Domótica%20Inteligente-blue?style=for-the-badge&logo=home)
+![Deploy Status](https://img.shields.io/badge/Deploy%20Status-Live%20on%20Vercel-green?style=for-the-badge&logo=vercel)
+
+## 🌐 **SITIO EN VIVO**
+**URL Principal**: https://zonit-domotica.vercel.app
 
 ## ✨ Características
 
@@ -56,6 +60,10 @@ cd zonit
 ### Vercel
 El sitio se despliega automáticamente en Vercel desde GitHub.
 
+**URLs de Despliegue:**
+- 🌐 **Producción**: https://zonit-domotica.vercel.app
+- 🔧 **Preview**: https://zonit-5w0nr0964-viozs-projects.vercel.app
+
 ## 🌟 Características del Diseño
 
 ### Header Elegante
@@ -101,6 +109,7 @@ Ajusta las duraciones y easing en `styles.css`.
 
 - **GitHub**: [@NFTSkull](https://github.com/NFTSkull)
 - **Proyecto**: [Zonit Repository](https://github.com/NFTSkull/zonit)
+- **Sitio Web**: [https://zonit-domotica.vercel.app](https://zonit-domotica.vercel.app)
 
 ## 📄 Licencia
 
@@ -111,4 +120,5 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 <div align="center">
   <p>Hecho con ❤️ para Zonit</p>
   <p>Domótica Inteligente del Futuro</p>
+  <p>🚀 <strong>Desplegado en Vercel</strong></p>
 </div> 
