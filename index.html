@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonit - Domótica y Automatización Inteligente para Hogares y Negocios</title>
+    <meta name="description" content="Convierte tu hogar en una casa inteligente. Instalación de dispositivos inteligentes, integración con Alexa y Google Home. Automatización para hogares y negocios en Monterrey.">
+    <meta name="keywords" content="domótica Monterrey, casa inteligente, automatización hogar, Alexa Google Home, dispositivos inteligentes">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zonit-blue': '#1e40af',
+                        'zonit-accent': '#0ea5e9',
+                        'zonit-dark': '#1e293b',
+                        'zonit-gray': '#f8fafc',
+                        'zonit-text': '#475569'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-montserrat">
+    <!-- Header Ultra Elegante y Profesional -->
+    <header class="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <!-- Sección Principal del Header -->
+            <div class="flex justify-between items-center py-6">
+                
+                <!-- Logo Elegante -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-gradient-to-br from-zonit-blue to-zonit-accent rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-microchip text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="text-3xl font-light bg-gradient-to-r from-zonit-blue to-zonit-accent bg-clip-text text-transparent tracking-wider">
+                        ZONIT
+                    </div>
+                </div>
+                
+                <!-- Sección 2: Navegación Principal -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <!-- Inicio -->
+                    <a href="#inicio" class="nav-modern group">
+                        <div class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-home text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Inicio</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Servicios Dropdown -->
+                    <div class="dropdown-modern relative group">
+                        <button class="nav-modern flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-cogs text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Servicios</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="dropdown-menu-modern">
+                            <div class="grid grid-cols-2 gap-3 p-4">
+                                <a href="domotica-casas.html" class="dropdown-item-modern group">
+                                    <i class="fas fa-home text-zonit-blue group-hover:text-blue-600"></i>
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold">Domótica Casas</span>
+                                        <span class="text-xs text-gray-500 mt-1">Hogares Inteligentes</span>
+                                    </div>
+                                </a>
+                                <a href="automatizacion-negocios.html" class="dropdown-item-modern group">
+                                    <i class="fas fa-building text-purple-500 group-hover:text-purple-600"></i>
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold">Automatización Negocios</span>
+                                        <span class="text-xs text-gray-500 mt-1">Empresas Inteligentes</span>
+                                    </div>
+                                </a>
+                                <a href="camaras-cerraduras.html" class="dropdown-item-modern group">
+                                    <i class="fas fa-video text-cyan-500 group-hover:text-cyan-600"></i>
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold">Cámaras y Cerraduras</span>
+                                        <span class="text-xs text-gray-500 mt-1">Seguridad Inteligente</span>
+                                    </div>
+                                </a>
+                                <a href="integracion-alexa.html" class="dropdown-item-modern group">
+                                    <i class="fas fa-microphone text-green-500 group-hover:text-green-600"></i>
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold">Integración Alexa</span>
+                                        <span class="text-xs text-gray-500 mt-1">Control por Voz</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyectos -->
+                    <a href="proyectos.html" class="nav-modern group">
+                        <div class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-project-diagram text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Proyectos</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Blog -->
+                    <a href="blog.html" class="nav-modern group">
+                        <div class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-blog text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Blog</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Nosotros -->
+                    <a href="nosotros.html" class="nav-modern group">
+                        <div class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-users text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Nosotros</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Contacto -->
+                    <a href="contacto.html" class="nav-modern group">
+                        <div class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-zonit-blue/10">
+                            <i class="fas fa-envelope text-zonit-blue group-hover:scale-110 transition-transform"></i>
+                            <span class="font-medium text-zonit-dark group-hover:text-zonit-blue transition-colors">Contacto</span>
+                        </div>
+                    </a>
+                </nav>
+                
+                <!-- Sección 3: Acciones y CTA -->
+                <div class="flex items-center space-x-3">
+                    <!-- Botón CTA Principal -->
+                    <button class="hidden md:block cta-button-modern group">
+                        <div class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-zonit-blue to-purple-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            <i class="fas fa-rocket text-sm group-hover:animate-bounce"></i>
+                            <span>Cotiza Gratis</span>
+                            <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </button>
+                    
+
+                    
+                    <!-- Botón Móvil -->
+                    <button id="mobile-menu-button" class="lg:hidden mobile-menu-button p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-bars text-xl text-zonit-dark"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menú Móvil -->
+            <div id="mobile-menu" class="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm hidden">
+                <div class="flex justify-end p-4">
+                    <button id="close-mobile-menu" class="text-white text-2xl hover:text-gray-300 transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col items-center justify-center h-full -mt-16">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4">
+                        <div class="space-y-6">
+                            <!-- Inicio -->
+                            <a href="#inicio" class="mobile-nav-item">
+                                <i class="fas fa-home text-zonit-blue"></i>
+                                <span>Inicio</span>
+                            </a>
+                            
+                            <!-- Servicios -->
+                            <div class="mobile-dropdown">
+                                <button class="mobile-nav-item w-full text-left">
+                                    <i class="fas fa-cogs text-zonit-blue"></i>
+                                    <span>Servicios</span>
+                                    <i class="fas fa-chevron-down ml-auto transition-transform"></i>
+                                </button>
+                                <div class="mobile-dropdown-menu hidden mt-2 ml-6 space-y-2">
+                                    <a href="domotica-casas.html" class="mobile-dropdown-item">
+                                        <i class="fas fa-home text-zonit-blue"></i>
+                                        <span>Domótica Casas</span>
+                                    </a>
+                                    <a href="automatizacion-negocios.html" class="mobile-dropdown-item">
+                                        <i class="fas fa-building text-purple-500"></i>
+                                        <span>Automatización Negocios</span>
+                                    </a>
+                                    <a href="camaras-cerraduras.html" class="mobile-dropdown-item">
+                                        <i class="fas fa-video text-cyan-500"></i>
+                                        <span>Cámaras y Cerraduras</span>
+                                    </a>
+                                    <a href="integracion-alexa.html" class="mobile-dropdown-item">
+                                        <i class="fas fa-microphone text-green-500"></i>
+                                        <span>Integración Alexa</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Proyectos -->
+                            <a href="proyectos.html" class="mobile-nav-item">
+                                <i class="fas fa-project-diagram text-zonit-blue"></i>
+                                <span>Proyectos</span>
+                            </a>
+                            
+                            <!-- Blog -->
+                            <a href="blog.html" class="mobile-nav-item">
+                                <i class="fas fa-blog text-zonit-blue"></i>
+                                <span>Blog</span>
+                            </a>
+                            
+                            <!-- Nosotros -->
+                            <a href="nosotros.html" class="mobile-nav-item">
+                                <i class="fas fa-users text-zonit-blue"></i>
+                                <span>Nosotros</span>
+                            </a>
+                            
+                            <!-- Contacto -->
+                            <a href="contacto.html" class="mobile-nav-item">
+                                <i class="fas fa-envelope text-zonit-blue"></i>
+                                <span>Contacto</span>
+                            </a>
+                            
+                            <!-- CTA Móvil -->
+                            <div class="pt-4 border-t border-gray-200">
+                                <button class="w-full bg-gradient-to-r from-zonit-blue to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-zonit-blue transition-all duration-300 flex items-center justify-center space-x-2">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Cotiza Gratis</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Minimalista -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20 relative overflow-hidden">
+        <!-- Spots sutiles de iluminación -->
+        <div class="minimal-spots">
+            <div class="minimal-spot"></div>
+            <div class="minimal-spot"></div>
+            <div class="minimal-spot"></div>
+            <div class="minimal-spot"></div>
+            <div class="minimal-spot"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Título minimalista -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-12 md:mb-16 animate-fade-in tracking-wide">
+                <span class="block text-white mb-4 opacity-90 leading-tight">DOMÓTICA</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-zonit-accent mb-4 leading-tight">INTELIGENTE</span>
+            </h1>
+            
+            <!-- Descripción minimalista -->
+            <p class="text-lg md:text-xl lg:text-2xl mb-12 md:mb-16 max-w-2xl mx-auto animate-slide-up text-gray-200 leading-relaxed px-4 font-light">
+                Controla tu hogar desde cualquier lugar
+            </p>
+            
+            <!-- Botón minimalista -->
+            <div class="flex justify-center items-center mb-12 px-4">
+                <button class="btn-minimal text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-medium animate-scale-in group">
+                    <span>Cotiza Gratis</span>
+                    <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+            
+            <!-- Estadísticas minimalistas -->
+            <div class="grid grid-cols-3 gap-12 max-w-3xl mx-auto px-4">
+                <div class="text-center animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-3xl md:text-4xl font-light text-zonit-blue mb-2 tracking-wide">750+</div>
+                    <div class="text-sm text-gray-300 font-light">Hogares</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-3xl md:text-4xl font-light text-zonit-accent mb-2 tracking-wide">99%</div>
+                    <div class="text-sm text-gray-300 font-light">Satisfacción</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.7s;">
+                    <div class="text-3xl md:text-4xl font-light text-zonit-blue mb-2 tracking-wide">24/7</div>
+                    <div class="text-sm text-gray-300 font-light">Soporte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Ultra Elegantes -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Elementos decorativos sutiles -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-zonit-blue/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-40 h-40 bg-zonit-accent/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-24">
+                <div class="inline-flex items-center bg-zonit-blue/10 px-6 py-3 rounded-full mb-8">
+                    <i class="fas fa-star text-zonit-blue mr-3"></i>
+                    <span class="text-sm font-light tracking-wide text-zonit-blue">Beneficios Exclusivos</span>
+                </div>
+                <h2 class="text-4xl font-light text-zonit-dark mb-8 scroll-reveal tracking-wider">
+                    Tecnología que Transforma
+                </h2>
+                <p class="text-xl text-zonit-text max-w-3xl mx-auto scroll-reveal font-light leading-relaxed">
+                    Descubre cómo la domótica inteligente revoluciona tu estilo de vida
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Columna 1 -->
+                <div class="space-y-8">
+                    <!-- Seguridad -->
+                    <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-medium text-zonit-dark mb-4 tracking-wide">Seguridad 24/7</h3>
+                                <p class="text-zonit-text mb-6 leading-relaxed font-light">
+                                    Cámaras HD, sensores de movimiento y cerraduras inteligentes. 
+                                    Monitoreo en tiempo real desde cualquier dispositivo.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Alertas instantáneas</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Grabación automática</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eficiencia -->
+                    <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 flex-shrink-0">
+                                <i class="fas fa-leaf text-white text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-medium text-zonit-dark mb-4 tracking-wide">Ahorro Energético</h3>
+                                <p class="text-zonit-text mb-6 leading-relaxed font-light">
+                                    Reduce hasta un 45% tu consumo con termostatos inteligentes 
+                                    e iluminación LED automática.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Control automático de temperatura</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Iluminación adaptativa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="space-y-8">
+                    <!-- Control -->
+                    <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 flex-shrink-0">
+                                <i class="fas fa-mobile-alt text-white text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-medium text-zonit-dark mb-4 tracking-wide">Control Total</h3>
+                                <p class="text-zonit-text mb-6 leading-relaxed font-light">
+                                    Gestiona todos tus dispositivos desde una sola aplicación móvil. 
+                                    Control remoto desde cualquier lugar.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">App iOS y Android</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Integración con Alexa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personalización -->
+                    <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 flex-shrink-0">
+                                <i class="fas fa-user-cog text-white text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-medium text-zonit-dark mb-4 tracking-wide">Personalización</h3>
+                                <p class="text-zonit-text mb-6 leading-relaxed font-light">
+                                    Configuraciones adaptadas a tu estilo de vida. 
+                                    Rutinas automatizadas que aprenden tus hábitos.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Rutinas automáticas</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-zonit-text">
+                                        <i class="fas fa-check text-zonit-blue mr-3"></i>
+                                        <span class="font-light">Detección de presencia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estadísticas simplificadas -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">750+</div>
+                    <div class="text-zonit-text font-light">Hogares</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">99%</div>
+                    <div class="text-zonit-text font-light">Satisfacción</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">24/7</div>
+                    <div class="text-zonit-text font-light">Soporte</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">7</div>
+                    <div class="text-zonit-text font-light">Años</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-zonit-dark mb-4 scroll-reveal">
+                    Proceso Inteligente de Implementación
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-reveal">
+                    Nuestro método probado garantiza una instalación exitosa y una experiencia excepcional
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Paso 1: Consulta -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-comments text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-zonit-blue">01</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zonit-dark mb-4 text-center">Consulta Inteligente</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Evaluación técnica avanzada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Análisis de conectividad WiFi</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Definición de objetivos SMART</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Presupuesto personalizado</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="text-xs text-gray-500">Duración: 1-2 horas</div>
+                        <div class="text-xs text-zonit-blue font-medium">Gratis</div>
+                    </div>
+                </div>
+                
+                <!-- Paso 2: Diseño -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-pencil-ruler text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-zonit-blue">02</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zonit-dark mb-4 text-center">Diseño Personalizado IA</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Plan técnico 3D detallado</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Selección de dispositivos premium</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Simulación de funcionamiento</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Cotización transparente</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="text-xs text-gray-500">Duración: 2-3 días</div>
+                        <div class="text-xs text-zonit-blue font-medium">Incluye diseño 3D</div>
+                    </div>
+                </div>
+                
+                <!-- Paso 3: Instalación -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-zonit-blue">03</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zonit-dark mb-4 text-center">Instalación Profesional</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Instalación limpia sin cables visibles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Configuración avanzada de red</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Pruebas exhaustivas de seguridad</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Certificación de funcionamiento</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="text-xs text-gray-500">Duración: 1-3 días</div>
+                        <div class="text-xs text-zonit-blue font-medium">Técnicos certificados</div>
+                    </div>
+                </div>
+                
+                <!-- Paso 4: Activación -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-zonit-blue">04</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zonit-dark mb-4 text-center">Activación y Entrenamiento</h3>
+                    <div class="space-y-3 text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Configuración de app personalizada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Entrenamiento individual completo</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Manual de usuario digital</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-zonit-blue mr-2 text-sm"></i>
+                            <span class="text-sm">Soporte remoto incluido</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="text-xs text-gray-500">Duración: 2-4 horas</div>
+                        <div class="text-xs text-zonit-blue font-medium">Entrenamiento incluido</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Información adicional mejorada -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center scroll-reveal">
+                    <div class="text-3xl font-bold text-zonit-blue mb-2">100%</div>
+                    <div class="text-gray-600 font-medium">Garantía de Satisfacción</div>
+                    <div class="text-xs text-gray-500 mt-1">30 días sin compromiso</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-3xl font-bold text-zonit-blue mb-2">15 min</div>
+                    <div class="text-gray-600 font-medium">Tiempo de Respuesta</div>
+                    <div class="text-xs text-gray-500 mt-1">Soporte técnico 24/7</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-3xl font-bold text-zonit-blue mb-2">5 años</div>
+                    <div class="text-gray-600 font-medium">Garantía de Equipos</div>
+                    <div class="text-xs text-gray-500 mt-1">Reparación sin costo</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-3xl font-bold text-zonit-blue mb-2">0%</div>
+                    <div class="text-gray-600 font-medium">Interés en Financiamiento</div>
+                    <div class="text-xs text-gray-500 mt-1">Hasta 12 meses</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Minimalistas -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl font-light text-zonit-dark mb-6 scroll-reveal tracking-wide">
+                    Servicios
+                </h2>
+                <p class="text-lg text-zonit-text max-w-2xl mx-auto scroll-reveal font-light leading-relaxed">
+                    Soluciones inteligentes para tu espacio
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Domótica para Casas -->
+                <div class="card-minimal bg-gradient-to-br from-gray-50 to-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-medium text-zonit-dark tracking-wide">Domótica Residencial</h3>
+                            <p class="text-zonit-text font-light">Hogares inteligentes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Control de iluminación</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Termostatos inteligentes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Sistemas de entretenimiento</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-zonit-text font-light">
+                            <i class="fas fa-clock mr-2"></i>
+                            Instalación 1-2 días
+                        </div>
+                        <a href="domotica-casas.html" class="inline-flex items-center text-zonit-blue font-medium hover:text-zonit-accent transition-colors">
+                            Ver Detalles
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Automatización de Negocios -->
+                <div class="card-minimal bg-gradient-to-br from-gray-50 to-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-medium text-zonit-dark tracking-wide">Automatización Comercial</h3>
+                            <p class="text-zonit-text font-light">Optimización empresarial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Control de acceso</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Sistemas de vigilancia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Gestión de energía</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-zonit-text font-light">
+                            <i class="fas fa-clock mr-2"></i>
+                            Implementación 3-5 días
+                        </div>
+                        <a href="automatizacion-negocios.html" class="inline-flex items-center text-zonit-blue font-medium hover:text-zonit-accent transition-colors">
+                            Ver Detalles
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Seguridad Inteligente -->
+                <div class="card-minimal bg-gradient-to-br from-gray-50 to-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-medium text-zonit-dark tracking-wide">Seguridad Inteligente</h3>
+                            <p class="text-zonit-text font-light">Protección avanzada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Cámaras HD</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Cerraduras inteligentes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Sensores de movimiento</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-zonit-text font-light">
+                            <i class="fas fa-clock mr-2"></i>
+                            Instalación 1 día
+                        </div>
+                        <a href="camaras-cerraduras.html" class="inline-flex items-center text-zonit-blue font-medium hover:text-zonit-accent transition-colors">
+                            Ver Detalles
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Control por Voz -->
+                <div class="card-minimal bg-gradient-to-br from-gray-50 to-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-xl flex items-center justify-center mr-8 group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-microphone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-medium text-zonit-dark tracking-wide">Control por Voz</h3>
+                            <p class="text-zonit-text font-light">Integración con asistentes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Integración con Alexa</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Compatible con Google Home</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-4"></i>
+                            <span class="text-zonit-text font-light">Comandos personalizados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-zonit-text font-light">
+                            <i class="fas fa-clock mr-2"></i>
+                            Configuración 2-3 horas
+                        </div>
+                        <a href="integracion-alexa.html" class="inline-flex items-center text-zonit-blue font-medium hover:text-zonit-accent transition-colors">
+                            Ver Detalles
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Minimalistas -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl font-light text-zonit-dark mb-6 scroll-reveal tracking-wide">
+                    Experiencias
+                </h2>
+                <p class="text-lg text-zonit-text max-w-2xl mx-auto scroll-reveal font-light leading-relaxed">
+                    Lo que dicen nuestros clientes
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-full flex items-center justify-center text-white font-medium text-xl">
+                            M
+                        </div>
+                        <div class="ml-6">
+                            <h4 class="font-medium text-zonit-dark text-lg tracking-wide">María González</h4>
+                            <p class="text-zonit-text text-sm font-light">Residencial San Pedro</p>
+                        </div>
+                    </div>
+                    <p class="text-zonit-text leading-relaxed italic font-light text-lg">
+                        "Zonit transformó mi casa. Controlo todo desde mi celular. El ahorro en energía es increíble."
+                    </p>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-full flex items-center justify-center text-white font-medium text-xl">
+                            C
+                        </div>
+                        <div class="ml-6">
+                            <h4 class="font-medium text-zonit-dark text-lg tracking-wide">Carlos Mendoza</h4>
+                            <p class="text-zonit-text text-sm font-light">Restaurante El Patio</p>
+                        </div>
+                    </div>
+                    <p class="text-zonit-text leading-relaxed italic font-light text-lg">
+                        "Automatizamos todo mi restaurante. La eficiencia operativa mejoró significativamente."
+                    </p>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="card-minimal bg-white p-10 rounded-2xl shadow-sm border border-gray-100 scroll-reveal">
+                    <div class="flex items-center mb-8">
+                        <div class="w-14 h-14 bg-zonit-blue rounded-full flex items-center justify-center text-white font-medium text-xl">
+                            A
+                        </div>
+                        <div class="ml-6">
+                            <h4 class="font-medium text-zonit-dark text-lg tracking-wide">Ana Rodríguez</h4>
+                            <p class="text-zonit-text text-sm font-light">Casa Inteligente Centro</p>
+                        </div>
+                    </div>
+                    <p class="text-zonit-text leading-relaxed italic font-light text-lg">
+                        "La integración con Alexa es perfecta. Las rutinas automatizadas simplificaron mi vida."
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Estadísticas simplificadas -->
+            <div class="mt-20 grid md:grid-cols-4 gap-12">
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">98%</div>
+                    <div class="text-zonit-text font-light">Satisfacción</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">95%</div>
+                    <div class="text-zonit-text font-light">Recomendación</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">4.9/5</div>
+                    <div class="text-zonit-text font-light">Calificación</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-light text-zonit-blue mb-3 tracking-wide">500+</div>
+                    <div class="text-zonit-text font-light">Clientes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Minimalista -->
+    <section class="py-20 bg-gradient-to-br from-zonit-dark to-gray-900 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-light mb-8 scroll-reveal tracking-wide">
+                ¿Listo para la automatización?
+            </h2>
+            <p class="text-lg mb-12 max-w-2xl mx-auto scroll-reveal text-gray-200 leading-relaxed font-light">
+                Únete a más de 500 familias que ya disfrutan de la tecnología inteligente.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-8 justify-center items-center mb-16">
+                <button class="btn-minimal text-white px-10 py-5 rounded-lg text-lg font-medium group">
+                    <span>Cotiza Gratis</span>
+                    <i class="fas fa-arrow-right ml-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                
+                <div class="flex items-center text-white/80">
+                    <i class="fas fa-phone text-xl mr-4"></i>
+                    <span class="text-lg font-light">(81) 1234-5678</span>
+                </div>
+            </div>
+            
+            <!-- Beneficios rápidos -->
+            <div class="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+                <div class="text-center scroll-reveal">
+                    <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white"></i>
+                    </div>
+                    <h4 class="font-medium mb-3 tracking-wide">Respuesta Inmediata</h4>
+                    <p class="text-sm text-gray-300 font-light">Consulta en 24 horas</p>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <h4 class="font-medium mb-3 tracking-wide">Garantía Total</h4>
+                    <p class="text-sm text-gray-300 font-light">2 años de cobertura</p>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-white"></i>
+                    </div>
+                    <h4 class="font-medium mb-3 tracking-wide">Instalación Profesional</h4>
+                    <p class="text-sm text-gray-300 font-light">Equipo certificado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zonit-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Zonit Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">ZONIT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Especialistas en domótica y automatización inteligente para hogares y negocios.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicios -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="domotica-casas.html" class="hover:text-white transition-colors">Domótica para Casas</a></li>
+                        <li><a href="automatizacion-negocios.html" class="hover:text-white transition-colors">Automatización de Negocios</a></li>
+                        <li><a href="camaras-cerraduras.html" class="hover:text-white transition-colors">Cámaras y Cerraduras</a></li>
+                        <li><a href="integracion-alexa.html" class="hover:text-white transition-colors">Integración Alexa/Google</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Empresa -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="proyectos.html" class="hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contacto -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +52 81 1234 5678</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@zonit.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Monterrey, N.L.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Zonit. Todos los derechos reservados. | <a href="aviso-privacidad.html" class="hover:text-white transition-colors">Aviso de Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/528112345678" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll reveal con efectos avanzados
+        const scrollRevealOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    
+                    // Efecto de cascada para elementos múltiples
+                    const children = entry.target.querySelectorAll('.scroll-reveal');
+                    children.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.classList.add('revealed');
+                        }, index * 100);
+                    });
+                }
+            });
+        }, scrollRevealOptions);
+
+        // Observar elementos con scroll-reveal
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            scrollRevealObserver.observe(element);
+        });
+
+        // Efectos de hover para cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Animación de partículas
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            document.querySelector('.particles').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Crear partículas cada 2 segundos
+        setInterval(createParticle, 2000);
+
+        // Efectos de typing para títulos
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Efectos de parallax suave
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero-bg');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Animación de contador para estadísticas
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        // Efectos de carga
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            
+            // Animación de entrada para el hero
+            const heroTitle = document.querySelector('.hero-bg h1');
+            if (heroTitle) {
+                setTimeout(() => {
+                    heroTitle.style.opacity = '1';
+                    heroTitle.style.transform = 'translateY(0)';
+                }, 500);
+            }
+        });
+
+        // Efectos de navegación mejorados
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Efectos de botones
+        document.querySelectorAll('.btn-modern').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Efectos de iconos
+        document.querySelectorAll('.icon-pulse').forEach(icon => {
+            icon.addEventListener('mouseenter', function() {
+                this.style.animation = 'iconPulse 0.5s ease-in-out';
+            });
+            
+            icon.addEventListener('animationend', function() {
+                this.style.animation = 'iconPulse 2s ease-in-out infinite';
+            });
+        });
+
+        // Smooth scroll para toda la página
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Efectos de carga para imágenes
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Efectos de hover para dropdown
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            dropdown.addEventListener('mouseenter', function() {
+                menu.style.display = 'block';
+                setTimeout(() => {
+                    menu.style.opacity = '1';
+                    menu.style.transform = 'translateY(0)';
+                }, 10);
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                menu.style.opacity = '0';
+                menu.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                }, 300);
+            });
+        });
+
+        // Efectos de scroll únicos y avanzados
+        // Observer para scroll reveal optimizado - SIN EMPALMES
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Delay escalonado para evitar empalmes
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, 100);
+                    
+                    // Efectos especiales para el hero - Solo partículas
+                    if (entry.target.id === 'inicio') {
+                        // Activar partículas inteligentes con delay escalonado
+                        document.querySelectorAll('.intelligent-particle').forEach((particle, index) => {
+                            setTimeout(() => {
+                                particle.style.animationPlayState = 'running';
+                            }, index * 200);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos con scroll-reveal
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Efectos de typing para elementos específicos
+        const typingElements = document.querySelectorAll('.text-typing');
+        typingElements.forEach(element => {
+            const text = element.textContent;
+            element.textContent = '';
+            setTimeout(() => {
+                typeWriter(element, text, 50);
+            }, 1000);
+        });
+
+        // Efectos de scroll suave con parallax optimizado
+        let ticking = false;
+        
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            
+            // Efectos de iluminación basados en scroll con throttling
+            const scrollPercent = scrolled / (document.documentElement.scrollHeight - window.innerHeight);
+            document.querySelectorAll('.intelligent-particle').forEach((particle, index) => {
+                const delay = index * 0.03; // Reducido para evitar empalmes
+                particle.style.opacity = Math.max(0.5, 1 - scrollPercent + delay);
+            });
+            
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        });
+
+        // Efectos de mouse tracking optimizado para partículas
+        let mouseX = 0, mouseY = 0;
+        let mouseTicking = false;
+        
+        function updateMouseEffects() {
+            const particles = document.querySelectorAll('.intelligent-particle');
+            
+            particles.forEach((particle, index) => {
+                const speed = (index + 1) * 0.02; // Muy sutil
+                const x = (mouseX - 0.5) * speed * 15;
+                const y = (mouseY - 0.5) * speed * 15;
+                
+                particle.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            
+            mouseTicking = false;
+        }
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX / window.innerWidth;
+            mouseY = e.clientY / window.innerHeight;
+            
+            if (!mouseTicking) {
+                requestAnimationFrame(updateMouseEffects);
+                mouseTicking = true;
+            }
+        });
+
+        // Efectos sutiles para partículas
+        setInterval(() => {
+            const particles = document.querySelectorAll('.intelligent-particle');
+            particles.forEach((particle, index) => {
+                const time = Date.now() * 0.0005;
+                const opacity = 0.6 + Math.sin(time + index) * 0.2;
+                particle.style.opacity = opacity;
+            });
+        }, 2000); // Efecto muy sutil cada 2 segundos
+
+        // Funcionalidad del dropdown moderno optimizada
+        const dropdownsModern = document.querySelectorAll('.dropdown-modern');
+        
+        dropdownsModern.forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            const menu = dropdown.querySelector('.dropdown-menu-modern');
+            const chevron = button.querySelector('.fa-chevron-down');
+            let isOpen = false;
+            
+            // Función para mostrar dropdown
+            const showDropdown = () => {
+                menu.style.display = 'block';
+                menu.classList.remove('hide');
+                menu.classList.add('show');
+                chevron.style.transform = 'rotate(180deg)';
+                isOpen = true;
+            };
+            
+            // Función para ocultar dropdown
+            const hideDropdown = () => {
+                menu.classList.remove('show');
+                menu.classList.add('hide');
+                setTimeout(() => {
+                    if (!isOpen) {
+                        menu.style.display = 'none';
+                    }
+                }, 400);
+                chevron.style.transform = 'rotate(0deg)';
+                isOpen = false;
+            };
+            
+            // Mostrar dropdown al hacer hover
+            dropdown.addEventListener('mouseenter', () => {
+                showDropdown();
+            });
+            
+            // Ocultar dropdown al salir del hover
+            dropdown.addEventListener('mouseleave', () => {
+                hideDropdown();
+            });
+            
+            // Funcionalidad para dispositivos móviles
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isOpen) {
+                    hideDropdown();
+                } else {
+                    showDropdown();
+                }
+            });
+            
+            // Cerrar dropdown al hacer click fuera
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    hideDropdown();
+                }
+            });
+            
+                    // Prevenir que se cierre al hacer click en los items
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+
+    // Funcionalidad del menú móvil
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+    // Abrir menú móvil
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Cerrar menú móvil
+    closeMobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Cerrar menú al hacer click fuera
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Funcionalidad de dropdowns móviles
+    mobileDropdowns.forEach(dropdown => {
+        const button = dropdown.querySelector('button');
+        const menu = dropdown.querySelector('.mobile-dropdown-menu');
+        const chevron = button.querySelector('.fa-chevron-down');
+
+        button.addEventListener('click', () => {
+            const isOpen = menu.classList.contains('show');
+            
+            if (isOpen) {
+                menu.classList.remove('show');
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                menu.classList.add('show');
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+        // Funcionalidad del dropdown mejorada (mantener compatibilidad)
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const chevron = button.querySelector('.fa-chevron-down');
+            
+            // Mostrar dropdown al hacer hover
+            dropdown.addEventListener('mouseenter', () => {
+                menu.style.display = 'block';
+                chevron.style.transform = 'rotate(180deg)';
+            });
+            
+            // Ocultar dropdown al salir del hover
+            dropdown.addEventListener('mouseleave', () => {
+                menu.style.display = 'none';
+                chevron.style.transform = 'rotate(0deg)';
+            });
+            
+            // Funcionalidad para dispositivos móviles
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isVisible = menu.style.display === 'block';
+                menu.style.display = isVisible ? 'none' : 'block';
+                chevron.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración Alexa/Google Home - Zonit | Control por Voz Inteligente</title>
+    <meta name="description" content="Integración completa con Alexa y Google Home. Control por voz de luces, cámaras, cerraduras y más. Automatización inteligente en Monterrey.">
+    <meta name="keywords" content="Alexa Monterrey, Google Home, control voz, automatización voz, domótica voz">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zonit-blue': '#0D6EFD',
+                        'zonit-dark': '#1C1C1C',
+                        'zonit-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-montserrat">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-zonit-blue">
+                    <a href="index.html">ZONIT</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Inicio</a>
+                    
+                    <!-- Servicios Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors flex items-center">
+                            Servicios
+                            <i class="fas fa-chevron-down ml-1 transition-transform"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="domotica-casas.html">
+                                <i class="fas fa-home"></i>Domótica para Casas
+                            </a>
+                            <a href="automatizacion-negocios.html">
+                                <i class="fas fa-building"></i>Automatización de Negocios
+                            </a>
+                            <a href="camaras-cerraduras.html">
+                                <i class="fas fa-video"></i>Cámaras y Cerraduras Inteligentes
+                            </a>
+                            <a href="integracion-alexa.html">
+                                <i class="fas fa-microphone"></i>Integración Alexa/Google Home
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="proyectos.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Proyectos</a>
+                    <a href="blog.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Blog</a>
+                    <a href="nosotros.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Contacto</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <button class="bg-zonit-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                    Cotiza Gratis
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-zonit-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-20 relative overflow-hidden">
+        <!-- Grid de tecnología inteligente -->
+        <div class="tech-grid"></div>
+        
+        <!-- Partículas inteligentes -->
+        <div class="intelligent-particles">
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+        </div>
+        
+        <!-- Haces de luz dinámicos -->
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Badge ultra moderno -->
+            <div class="mb-16">
+                <div class="inline-flex items-center bg-gradient-to-r from-zonit-blue/20 to-purple-500/20 backdrop-blur-md px-8 py-4 rounded-full mb-8 animate-fade-in border border-white/30 shadow-2xl">
+                    <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                    <i class="fas fa-microphone text-zonit-blue mr-3 text-lg"></i>
+                    <span class="text-sm font-semibold text-white">Control por Voz IA</span>
+                </div>
+            </div>
+            
+            <!-- Título principal ultra moderno -->
+            <h1 class="text-7xl md:text-9xl font-bold mb-16 animate-fade-in">
+                <span class="block text-white mb-4 opacity-90">CONTROLA</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue via-purple-500 to-cyan-400 text-glow mb-4">TODO CON VOZ</span>
+                <span class="block text-white text-5xl md:text-6xl mt-6 font-light tracking-wider">INTELIGENTE</span>
+            </h1>
+            
+            <!-- Descripción ultra moderna -->
+            <p class="text-2xl md:text-3xl mb-16 max-w-5xl mx-auto animate-slide-up text-gray-200 leading-relaxed">
+                Integración completa con <span class="text-zonit-blue font-bold">Alexa</span> y <span class="text-purple-400 font-bold">Google Home</span>. Control por voz de luces, cámaras, cerraduras y más. 
+                <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-purple-500 font-bold text-glow">Automatización inteligente</span> con comandos de voz naturales.
+            </p>
+            
+            <!-- Botones ultra modernos -->
+            <div class="flex flex-col md:flex-row gap-10 justify-center items-center mb-20">
+                <button class="btn-modern text-white px-16 py-8 rounded-2xl text-2xl font-bold animate-scale-in group shadow-2xl bg-gradient-to-r from-zonit-blue to-purple-600 hover:from-purple-600 hover:to-zonit-blue">
+                    <i class="fas fa-microphone mr-4 text-2xl"></i>
+                    Cotiza Gratis
+                    <i class="fas fa-arrow-right ml-4 text-2xl group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                
+                <div class="flex items-center text-white/90 hover:text-white transition-all duration-300 cursor-pointer group">
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-play text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-semibold">Ver Demo</span>
+                </div>
+            </div>
+            
+            <!-- Estadísticas ultra modernas -->
+            <div class="grid grid-cols-3 gap-16 max-w-4xl mx-auto">
+                <div class="text-center animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-cyan-400 mb-4 text-glow">500+</div>
+                    <div class="text-lg text-gray-300 font-semibold">Integraciones Exitosas</div>
+                    <div class="text-xs text-gray-400 mt-2">Alexa y Google Home</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 text-glow">99.5%</div>
+                    <div class="text-lg text-gray-300 font-semibold">Precisión de Comandos</div>
+                    <div class="text-xs text-gray-400 mt-2">Reconocimiento de voz avanzado</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.7s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-4 text-glow">200+</div>
+                    <div class="text-lg text-gray-300 font-semibold">Comandos Personalizados</div>
+                    <div class="text-xs text-gray-400 mt-2">Rutinas inteligentes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios de Control por Voz -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-zonit-dark mb-4 scroll-reveal">
+                    Beneficios del Control por Voz Inteligente
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-reveal">
+                    Descubre cómo la integración con asistentes de voz transforma tu experiencia de automatización
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Columna 1 -->
+                <div class="space-y-8">
+                    <!-- Integración Alexa -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fab fa-amazon text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Integración Completa con Alexa</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Control total de tu hogar inteligente con Amazon Alexa. Comandos de voz naturales 
+                                    para controlar luces, cámaras, cerraduras, termostatos y más dispositivos.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Comandos de voz naturales</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Rutinas personalizadas</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Control multi-habitación</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-zonit-blue">Compatibilidad con 200+ dispositivos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Integración Google Home -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fab fa-google text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Integración con Google Home</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Control inteligente con Google Assistant. Comandos de voz avanzados, rutinas 
+                                    automáticas y sincronización perfecta con el ecosistema Google.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Google Assistant integrado</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Rutinas automáticas</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Sincronización con Google Calendar</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-green-600">Integración con Google Calendar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="space-y-8">
+                    <!-- Comandos Personalizados -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-magic text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Comandos Personalizados IA</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Creación de comandos de voz personalizados y rutinas inteligentes. Automatización 
+                                    basada en horarios, presencia y eventos específicos de tu hogar.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Comandos personalizados</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Rutinas basadas en horarios</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Automatización por presencia</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-purple-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-purple-600">Hasta 50 comandos personalizados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experiencia Intuitiva -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Experiencia Intuitiva IA</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Interfaz de voz natural que aprende tus hábitos y preferencias. Reconocimiento 
+                                    de voz avanzado con respuesta instantánea y precisión del 99.5%.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Reconocimiento de voz avanzado</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Aprendizaje de hábitos</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Respuesta instantánea</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-orange-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-orange-600">Precisión del 99.5%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estadísticas de Control por Voz -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">500+</div>
+                    <div class="text-gray-600 font-medium">Integraciones Exitosas</div>
+                    <div class="text-xs text-gray-500 mt-1">Alexa y Google Home</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">99.5%</div>
+                    <div class="text-gray-600 font-medium">Precisión de Comandos</div>
+                    <div class="text-xs text-gray-500 mt-1">Reconocimiento de voz avanzado</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">200+</div>
+                    <div class="text-gray-600 font-medium">Comandos Personalizados</div>
+                    <div class="text-xs text-gray-500 mt-1">Rutinas inteligentes</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">7</div>
+                    <div class="text-gray-600 font-medium">Años de Experiencia</div>
+                    <div class="text-xs text-gray-500 mt-1">Especialistas certificados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zonit-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-zonit-blue mb-4">ZONIT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Líder en automatización inteligente para hogares y negocios en Monterrey.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="domotica-casas.html" class="hover:text-zonit-blue transition-colors">Domótica para Casas</a></li>
+                        <li><a href="automatizacion-negocios.html" class="hover:text-zonit-blue transition-colors">Automatización de Negocios</a></li>
+                        <li><a href="camaras-cerraduras.html" class="hover:text-zonit-blue transition-colors">Cámaras y Cerraduras</a></li>
+                        <li><a href="integracion-alexa.html" class="hover:text-zonit-blue transition-colors">Integración Alexa/Google Home</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="nosotros.html" class="hover:text-zonit-blue transition-colors">Nosotros</a></li>
+                        <li><a href="proyectos.html" class="hover:text-zonit-blue transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="hover:text-zonit-blue transition-colors">Blog</a></li>
+                        <li><a href="contacto.html" class="hover:text-zonit-blue transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i>+52 81 1234 5678</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@zonit.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Monterrey, N.L.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Zonit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/528112345678" class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Funcionalidad del dropdown mejorada
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const chevron = button.querySelector('.fa-chevron-down');
+            
+            // Mostrar dropdown al hacer hover
+            dropdown.addEventListener('mouseenter', () => {
+                menu.style.display = 'block';
+                chevron.style.transform = 'rotate(180deg)';
+            });
+            
+            // Ocultar dropdown al salir del hover
+            dropdown.addEventListener('mouseleave', () => {
+                menu.style.display = 'none';
+                chevron.style.transform = 'rotate(0deg)';
+            });
+            
+            // Funcionalidad para dispositivos móviles
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isVisible = menu.style.display === 'block';
+                menu.style.display = isVisible ? 'none' : 'block';
+                chevron.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Observer para scroll reveal
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html> 

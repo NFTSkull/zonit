@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domótica para Casas - Zonit | Casa Inteligente en Monterrey</title>
+    <meta name="description" content="Transforma tu hogar en una casa inteligente. Controla luces, termostatos, cámaras y más desde tu celular. Domótica profesional en Monterrey.">
+    <meta name="keywords" content="domótica casas Monterrey, casa inteligente, automatización hogar, control luces, termostatos inteligentes">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zonit-blue': '#0D6EFD',
+                        'zonit-dark': '#1C1C1C',
+                        'zonit-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .hero-domotica {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.9), rgba(28, 28, 28, 0.8)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="font-montserrat">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-zonit-blue">
+                    <a href="index.html">ZONIT</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-zonit-dark hover:text-zonit-blue transition-colors">Inicio</a>
+                    
+                    <!-- Servicios Dropdown -->
+                    <div class="relative group">
+                        <button class="text-zonit-dark hover:text-zonit-blue transition-colors flex items-center">
+                            Servicios
+                            <i class="fas fa-chevron-down ml-1"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="domotica-casas.html" class="block px-4 py-2 text-sm text-zonit-dark hover:bg-zonit-gray bg-zonit-gray">Domótica para Casas</a>
+                            <a href="automatizacion-negocios.html" class="block px-4 py-2 text-sm text-zonit-dark hover:bg-zonit-gray">Automatización de Negocios</a>
+                            <a href="camaras-cerraduras.html" class="block px-4 py-2 text-sm text-zonit-dark hover:bg-zonit-gray">Cámaras y Cerraduras Inteligentes</a>
+                            <a href="integracion-alexa.html" class="block px-4 py-2 text-sm text-zonit-dark hover:bg-zonit-gray">Integración Alexa/Google Home</a>
+                        </div>
+                    </div>
+                    
+                    <a href="proyectos.html" class="text-zonit-dark hover:text-zonit-blue transition-colors">Proyectos</a>
+                    <a href="blog.html" class="text-zonit-dark hover:text-zonit-blue transition-colors">Blog</a>
+                    <a href="nosotros.html" class="text-zonit-dark hover:text-zonit-blue transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="text-zonit-dark hover:text-zonit-blue transition-colors">Contacto</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <button class="bg-zonit-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                    Cotiza Gratis
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-zonit-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-20 relative overflow-hidden">
+        <!-- Grid de tecnología inteligente -->
+        <div class="tech-grid"></div>
+        
+        <!-- Partículas inteligentes -->
+        <div class="intelligent-particles">
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+        </div>
+        
+        <!-- Haces de luz dinámicos -->
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Badge ultra moderno -->
+            <div class="mb-16">
+                <div class="inline-flex items-center bg-gradient-to-r from-zonit-blue/20 to-purple-500/20 backdrop-blur-md px-8 py-4 rounded-full mb-8 animate-fade-in border border-white/30 shadow-2xl">
+                    <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                    <i class="fas fa-home text-zonit-blue mr-3 text-lg"></i>
+                    <span class="text-sm font-semibold text-white">Domótica Residencial IA</span>
+                </div>
+            </div>
+            
+            <!-- Título principal ultra moderno -->
+            <h1 class="text-7xl md:text-9xl font-bold mb-16 animate-fade-in">
+                <span class="block text-white mb-4 opacity-90">TRANSFORMA</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue via-purple-500 to-cyan-400 text-glow mb-4">TU CASA</span>
+                <span class="block text-white text-5xl md:text-6xl mt-6 font-light tracking-wider">EN INTELIGENTE</span>
+            </h1>
+            
+            <!-- Descripción ultra moderna -->
+            <p class="text-2xl md:text-3xl mb-16 max-w-5xl mx-auto animate-slide-up text-gray-200 leading-relaxed">
+                Controla <span class="text-zonit-blue font-bold">luces</span>, <span class="text-purple-400 font-bold">temperatura</span>, <span class="text-cyan-400 font-bold">seguridad</span> y más desde tu celular. 
+                <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-purple-500 font-bold text-glow">Automatización total</span> para tu comodidad y confort.
+            </p>
+            
+            <!-- Botones ultra modernos -->
+            <div class="flex flex-col md:flex-row gap-10 justify-center items-center mb-20">
+                <button class="btn-modern text-white px-16 py-8 rounded-2xl text-2xl font-bold animate-scale-in group shadow-2xl bg-gradient-to-r from-zonit-blue to-purple-600 hover:from-purple-600 hover:to-zonit-blue">
+                    <i class="fas fa-home mr-4 text-2xl"></i>
+                    Cotiza Gratis
+                    <i class="fas fa-arrow-right ml-4 text-2xl group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                
+                <div class="flex items-center text-white/90 hover:text-white transition-all duration-300 cursor-pointer group">
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-play text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-semibold">Ver Demo</span>
+                </div>
+            </div>
+            
+            <!-- Estadísticas ultra modernas -->
+            <div class="grid grid-cols-3 gap-16 max-w-4xl mx-auto">
+                <div class="text-center animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-cyan-400 mb-4 text-glow">500+</div>
+                    <div class="text-lg text-gray-300 font-semibold">Casas Automatizadas</div>
+                    <div class="text-xs text-gray-400 mt-2">En Monterrey y área metropolitana</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 text-glow">99.8%</div>
+                    <div class="text-lg text-gray-300 font-semibold">Clientes Satisfechos</div>
+                    <div class="text-xs text-gray-400 mt-2">Basado en 500+ instalaciones</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.7s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-4 text-glow">24/7</div>
+                    <div class="text-lg text-gray-300 font-semibold">Soporte Técnico</div>
+                    <div class="text-xs text-gray-400 mt-2">Respuesta en menos de 15 min</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripción -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-zonit-dark mb-6">Tu Casa, Tu Control</h2>
+                    <p class="text-xl text-gray-700 mb-6">
+                        La domótica para casas te permite controlar todos los aspectos de tu hogar de manera inteligente y automatizada. Desde las luces hasta la seguridad, todo está a tu alcance.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Imagina poder encender las luces, ajustar la temperatura, verificar las cámaras de seguridad y controlar las cerraduras, todo desde tu smartphone o con comandos de voz.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb text-white"></i>
+                            </div>
+                            <span class="font-semibold text-zonit-dark">Luces Inteligentes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-thermometer-half text-white"></i>
+                            </div>
+                            <span class="font-semibold text-zonit-dark">Termostatos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-video text-white"></i>
+                            </div>
+                            <span class="font-semibold text-zonit-dark">Cámaras</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-lock text-white"></i>
+                            </div>
+                            <span class="font-semibold text-zonit-dark">Cerraduras</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Casa Inteligente" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dispositivos -->
+    <section class="py-20 bg-zonit-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-zonit-dark mb-16">Dispositivos Inteligentes</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Luces Inteligentes -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-16 h-16 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zonit-dark mb-4 text-center">Luces Inteligentes</h3>
+                    <p class="text-gray-700 text-center mb-4">
+                        Controla la iluminación de cada habitación desde tu celular. Programa horarios, ajusta intensidad y cambia colores.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Bombillas WiFi</li>
+                        <li>• Interruptores inteligentes</li>
+                        <li>• Programación automática</li>
+                        <li>• Control por voz</li>
+                    </ul>
+                </div>
+                
+                <!-- Termostatos -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-16 h-16 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-thermometer-half text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zonit-dark mb-4 text-center">Termostatos Inteligentes</h3>
+                    <p class="text-gray-700 text-center mb-4">
+                        Optimiza el clima de tu hogar y ahorra energía con termostatos que aprenden tus preferencias.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Control remoto</li>
+                        <li>• Programación inteligente</li>
+                        <li>• Ahorro energético</li>
+                        <li>• Integración con Alexa</li>
+                    </ul>
+                </div>
+                
+                <!-- Seguridad -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="w-16 h-16 bg-zonit-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zonit-dark mb-4 text-center">Sistema de Seguridad</h3>
+                    <p class="text-gray-700 text-center mb-4">
+                        Monitorea tu hogar 24/7 con cámaras, sensores y cerraduras inteligentes.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Cámaras WiFi</li>
+                        <li>• Sensores de movimiento</li>
+                        <li>• Cerraduras inteligentes</li>
+                        <li>• Alertas en tiempo real</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-zonit-dark mb-16">Beneficios de la Domótica</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-dollar-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-zonit-dark mb-2">Ahorro Energético</h3>
+                                <p class="text-gray-600">Reduce hasta 30% tu consumo de energía con programación inteligente de luces y clima.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-zonit-dark mb-2">Seguridad Mejorada</h3>
+                                <p class="text-gray-600">Monitorea tu hogar desde cualquier lugar y recibe alertas en tiempo real.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-zonit-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-couch text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-zonit-dark mb-2">Máxima Comodidad</h3>
+                                <p class="text-gray-600">Controla todo con tu voz o desde tu smartphone sin moverte del sofá.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zonit-gray p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-zonit-dark mb-6">¿Por qué elegir Zonit?</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-3"></i>
+                            Instalación profesional certificada
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-3"></i>
+                            Soporte técnico 24/7
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-3"></i>
+                            Garantía en todos los dispositivos
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-3"></i>
+                            Capacitación para tu familia
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-zonit-blue mr-3"></i>
+                            Integración con Alexa y Google Home
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-zonit-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">¿Listo para hacer tu casa inteligente?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Nuestros expertos en domótica están listos para transformar tu hogar en una casa inteligente
+            </p>
+            <button class="bg-zonit-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors">
+                Solicita una cotización
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zonit-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Zonit Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">ZONIT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Especialistas en domótica y automatización inteligente para hogares y negocios.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicios -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="domotica-casas.html" class="hover:text-white transition-colors">Domótica para Casas</a></li>
+                        <li><a href="automatizacion-negocios.html" class="hover:text-white transition-colors">Automatización de Negocios</a></li>
+                        <li><a href="camaras-cerraduras.html" class="hover:text-white transition-colors">Cámaras y Cerraduras</a></li>
+                        <li><a href="integracion-alexa.html" class="hover:text-white transition-colors">Integración Alexa/Google</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Empresa -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="proyectos.html" class="hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contacto -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +52 81 1234 5678</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@zonit.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Monterrey, N.L.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Zonit. Todos los derechos reservados. | <a href="aviso-privacidad.html" class="hover:text-white transition-colors">Aviso de Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/528112345678" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Animación de aparición al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1017 @@
+/* Estilos Elegantes del Header */
+.nav-elegant {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(30, 64, 175, 0.08), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.nav-elegant:hover::before {
+    transform: translateX(100%);
+}
+
+/* Dropdown Elegante */
+.dropdown-elegant {
+    position: relative;
+}
+
+.dropdown-menu-elegant {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    z-index: 1000;
+    min-width: 500px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    border-radius: 24px;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(30, 64, 175, 0.1);
+    padding: 16px;
+    margin-top: 16px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.dropdown-elegant:hover .dropdown-menu-elegant {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: all;
+}
+
+.dropdown-item-elegant {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid transparent;
+    margin: 3px;
+}
+
+.dropdown-item-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.12), transparent);
+    transition: left 0.5s ease;
+}
+
+.dropdown-item-elegant:hover::before {
+    left: 100%;
+}
+
+.dropdown-item-elegant:hover {
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateX(10px) translateY(-3px);
+    border-color: rgba(30, 64, 175, 0.2);
+    box-shadow: 0 12px 30px rgba(30, 64, 175, 0.15);
+}
+
+.dropdown-item-elegant i {
+    width: 32px;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.dropdown-item-elegant:hover i {
+    transform: scale(1.15);
+}
+
+.dropdown-item-elegant .flex-col {
+    flex: 1;
+}
+
+.dropdown-item-elegant .flex-col span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.dropdown-item-elegant .flex-col span:last-child {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 1.3;
+}
+
+/* Botón CTA Elegante */
+.cta-button-elegant {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.cta-button-elegant:hover::before {
+    left: 100%;
+}
+
+/* Botón Móvil Elegante */
+.mobile-menu-button-elegant {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-menu-button-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(30, 64, 175, 0.08), transparent);
+    transform: scale(0);
+    transition: transform 0.4s ease;
+}
+
+.mobile-menu-button-elegant:hover::before {
+    transform: scale(1);
+}
+
+/* Líneas decorativas */
+.decorative-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.decorative-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.1), transparent);
+    animation: decorativeLineFloat 12s ease-in-out infinite;
+}
+
+.decorative-line:nth-child(1) {
+    width: 200px;
+    height: 1px;
+    top: 20%;
+    left: -200px;
+    animation-delay: 0s;
+}
+
+.decorative-line:nth-child(2) {
+    width: 150px;
+    height: 1px;
+    top: 60%;
+    right: -150px;
+    animation-delay: 4s;
+}
+
+.decorative-line:nth-child(3) {
+    width: 180px;
+    height: 1px;
+    bottom: 30%;
+    left: -180px;
+    animation-delay: 8s;
+}
+
+@keyframes decorativeLineFloat {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Botones ultra elegantes */
+.btn-ultra-elegant {
+    background: linear-gradient(45deg, #1e40af, #1e3a8a);
+    border: none;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+}
+
+.btn-ultra-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn-ultra-elegant:hover::before {
+    left: 100%;
+}
+
+.btn-ultra-elegant:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.5);
+}
+
+.btn-secondary-elegant {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.btn-secondary-elegant:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Estilos Minimalistas Mejorados */
+.minimal-spots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.minimal-spot {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.12) 0%, transparent 70%);
+    animation: minimalSpotPulse 8s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+.minimal-spot:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.15) 0%, transparent 70%);
+}
+
+.minimal-spot:nth-child(2) {
+    width: 180px;
+    height: 180px;
+    top: 65%;
+    right: 20%;
+    animation-delay: 2s;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+}
+
+.minimal-spot:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    bottom: 25%;
+    left: 25%;
+    animation-delay: 4s;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.12) 0%, transparent 70%);
+}
+
+.minimal-spot:nth-child(4) {
+    width: 140px;
+    height: 140px;
+    top: 35%;
+    right: 35%;
+    animation-delay: 1s;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+}
+
+.minimal-spot:nth-child(5) {
+    width: 90px;
+    height: 90px;
+    top: 75%;
+    left: 60%;
+    animation-delay: 3s;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.1) 0%, transparent 70%);
+}
+
+@keyframes minimalSpotPulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% { 
+        transform: scale(1.4);
+        opacity: 0.8;
+    }
+}
+
+/* Botón minimalista mejorado */
+.btn-minimal {
+    background: linear-gradient(45deg, #1e40af, #1e3a8a);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+}
+
+.btn-minimal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-minimal:hover::before {
+    left: 100%;
+}
+
+.btn-minimal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(30, 64, 175, 0.4);
+}
+
+/* Cards minimalistas mejoradas */
+.card-minimal {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.card-minimal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.06), transparent);
+    transition: left 0.5s ease;
+}
+
+.card-minimal:hover::before {
+    left: 100%;
+}
+
+.card-minimal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Efectos de iluminación inteligente y partículas únicas */
+.hero-bg {
+    background: linear-gradient(135deg, #0D6EFD, #1C1C1C, #0D6EFD);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid de tecnología inteligente - ELIMINADO */
+
+/* Spots de iluminación inteligente */
+.smart-spot {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.3) 0%, transparent 70%);
+    animation: spotPulse 4s ease-in-out infinite;
+}
+
+.smart-spot:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.smart-spot:nth-child(2) {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.smart-spot:nth-child(3) {
+    bottom: 30%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.smart-spot:nth-child(4) {
+    top: 40%;
+    right: 40%;
+    animation-delay: 1s;
+}
+
+@keyframes spotPulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+/* Partículas inteligentes elegantes */
+.intelligent-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.intelligent-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, #0D6EFD, #ffffff);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+    animation: intelligentFloat 15s linear infinite;
+    opacity: 0.7;
+}
+
+.intelligent-particle:nth-child(1) { 
+    left: 5%; 
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.intelligent-particle:nth-child(2) { 
+    left: 15%; 
+    animation-delay: 3s;
+    animation-duration: 18s;
+}
+.intelligent-particle:nth-child(3) { 
+    left: 25%; 
+    animation-delay: 6s;
+    animation-duration: 12s;
+}
+.intelligent-particle:nth-child(4) { 
+    left: 35%; 
+    animation-delay: 9s;
+    animation-duration: 20s;
+}
+.intelligent-particle:nth-child(5) { 
+    left: 45%; 
+    animation-delay: 2s;
+    animation-duration: 16s;
+}
+.intelligent-particle:nth-child(6) { 
+    left: 55%; 
+    animation-delay: 5s;
+    animation-duration: 14s;
+}
+.intelligent-particle:nth-child(7) { 
+    left: 65%; 
+    animation-delay: 8s;
+    animation-duration: 17s;
+}
+.intelligent-particle:nth-child(8) { 
+    left: 75%; 
+    animation-delay: 1s;
+    animation-duration: 19s;
+}
+.intelligent-particle:nth-child(9) { 
+    left: 85%; 
+    animation-delay: 4s;
+    animation-duration: 13s;
+}
+.intelligent-particle:nth-child(10) { 
+    left: 95%; 
+    animation-delay: 7s;
+    animation-duration: 21s;
+}
+
+@keyframes intelligentFloat {
+    0% {
+        transform: translateY(100vh) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.7;
+        transform: translateY(85vh) scale(1) rotate(45deg);
+    }
+    35% {
+        transform: translateY(65vh) scale(1.1) rotate(90deg);
+    }
+    50% {
+        transform: translateY(50vh) scale(0.9) rotate(180deg);
+    }
+    65% {
+        transform: translateY(35vh) scale(1.05) rotate(270deg);
+    }
+    85% {
+        opacity: 0.7;
+        transform: translateY(15vh) scale(0.95) rotate(315deg);
+    }
+    100% {
+        transform: translateY(-5vh) scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Efectos de iluminación dinámica - ELIMINADOS */
+
+/* Efectos de ondas de energía */
+.energy-wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(13, 110, 253, 0.1) 50%, transparent 100%);
+    animation: waveExpand 6s ease-in-out infinite;
+}
+
+.energy-wave:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.energy-wave:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.energy-wave:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes waveExpand {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Efectos de texto con iluminación */
+.text-glow {
+    text-shadow: 0 0 30px rgba(13, 110, 253, 0.8);
+}
+
+.text-typing {
+    overflow: hidden;
+    border-right: 3px solid #0D6EFD;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #0D6EFD; }
+}
+
+/* Botones con efectos de iluminación */
+.btn-modern {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #0D6EFD, #0056b3);
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-modern:hover::before {
+    left: 100%;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+}
+
+/* Efectos de scroll optimizados - SIN EMPALMES */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animaciones de entrada espectaculares */
+.animate-fade-in {
+    animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-slide-up {
+    animation: slideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(60px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes scaleIn {
+    from { 
+        opacity: 0; 
+        transform: scale(0.9); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+/* Header Ultra Moderno - Estilos Principales */
+.nav-modern {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(13, 110, 253, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-modern:hover::before {
+    transform: translateX(100%);
+}
+
+/* Dropdown Moderno Optimizado */
+.dropdown-modern {
+    position: relative;
+}
+
+.dropdown-menu-modern {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 250px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.dropdown:hover .dropdown-menu-modern {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+.dropdown-menu-modern {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.dropdown:hover .dropdown-menu-modern {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #1C1C1C;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background: #F8F9FA;
+    color: #0D6EFD;
+    transform: translateX(5px);
+}
+
+.dropdown-menu a i {
+    width: 16px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating WhatsApp mejorado */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: floatWhatsApp 3s ease-in-out infinite;
+}
+
+@keyframes floatWhatsApp {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+/* Efectos de carga */
+.loading-dots {
+    display: inline-block;
+}
+
+.loading-dots::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+/* Efectos de gradiente dinámico */
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Efectos de float */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Cards con efectos optimizados */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.card-hover:hover::before {
+    left: 100%;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos animados */
+.icon-pulse {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Optimización para secciones */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Efectos de parallax suaves */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+/* Optimización de rendimiento */
+* {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Efectos de scroll suaves para el body */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+    .scroll-reveal {
+        transform: translateY(30px);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* Optimizaciones específicas para móviles */
+@media (max-width: 640px) {
+    .hero-bg {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .intelligent-particle {
+        width: 3px;
+        height: 3px;
+        box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+    }
+    
+    /* .light-beam {
+        width: 1px;
+    } */
+    
+    /* .tech-grid {
+        background-size: 30px 30px;
+    } */
+    
+    .btn-modern {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .floating-whatsapp {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+    
+    .floating-whatsapp i {
+        font-size: 1.5rem;
+    }
+    
+    .text-glow {
+        text-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+    }
+    
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in {
+        animation-duration: 0.6s;
+    }
+}
+
+/* Optimizaciones para tablets */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .hero-bg {
+        min-height: 100vh;
+        padding-top: 100px;
+    }
+    
+    .intelligent-particle {
+        width: 4px;
+        height: 4px;
+    }
+    
+    .btn-modern {
+        max-width: 320px;
+    }
+    
+    /* Header optimizado para tablets */
+    .dropdown-menu-modern {
+        min-width: 350px;
+    }
+    
+    .nav-modern {
+        padding: 8px 12px;
+    }
+}
+
+/* Header optimizado para móviles */
+@media (max-width: 1024px) {
+    .dropdown-menu-modern {
+        min-width: 280px;
+        left: -50%;
+    }
+    
+    .dropdown-item-modern {
+        padding: 10px 12px;
+    }
+    
+    .dropdown-item-modern span {
+        font-size: 13px;
+    }
+}
+
+/* Header ultra responsivo */
+@media (max-width: 768px) {
+    .nav-modern {
+        padding: 6px 8px;
+    }
+    
+    .cta-button-modern {
+        padding: 8px 12px;
+    }
+    
+    .dropdown-menu-modern {
+        min-width: 250px;
+        left: -100%;
+    }
+} 

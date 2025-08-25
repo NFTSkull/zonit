@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámaras y Cerraduras Inteligentes - Zonit | Seguridad Avanzada</title>
+    <meta name="description" content="Sistemas de seguridad inteligentes con cámaras HD y cerraduras biométricas. Protección 24/7 para tu hogar y negocio en Monterrey.">
+    <meta name="keywords" content="cámaras seguridad Monterrey, cerraduras inteligentes, seguridad hogar, CCTV">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zonit-blue': '#0D6EFD',
+                        'zonit-dark': '#1C1C1C',
+                        'zonit-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-montserrat">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-zonit-blue">
+                    <a href="index.html">ZONIT</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Inicio</a>
+                    
+                    <!-- Servicios Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors flex items-center">
+                            Servicios
+                            <i class="fas fa-chevron-down ml-1 transition-transform"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="domotica-casas.html">
+                                <i class="fas fa-home"></i>Domótica para Casas
+                            </a>
+                            <a href="automatizacion-negocios.html">
+                                <i class="fas fa-building"></i>Automatización de Negocios
+                            </a>
+                            <a href="camaras-cerraduras.html">
+                                <i class="fas fa-video"></i>Cámaras y Cerraduras Inteligentes
+                            </a>
+                            <a href="integracion-alexa.html">
+                                <i class="fas fa-microphone"></i>Integración Alexa/Google Home
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="proyectos.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Proyectos</a>
+                    <a href="blog.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Blog</a>
+                    <a href="nosotros.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="nav-link text-zonit-dark hover:text-zonit-blue transition-colors">Contacto</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <button class="bg-zonit-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-semibold">
+                    Cotiza Gratis
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-zonit-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-20 relative overflow-hidden">
+        <!-- Grid de tecnología inteligente -->
+        <div class="tech-grid"></div>
+        
+        <!-- Partículas inteligentes -->
+        <div class="intelligent-particles">
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+            <div class="intelligent-particle"></div>
+        </div>
+        
+        <!-- Haces de luz dinámicos -->
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        <div class="light-beam"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Badge ultra moderno -->
+            <div class="mb-16">
+                <div class="inline-flex items-center bg-gradient-to-r from-zonit-blue/20 to-purple-500/20 backdrop-blur-md px-8 py-4 rounded-full mb-8 animate-fade-in border border-white/30 shadow-2xl">
+                    <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                    <i class="fas fa-shield-alt text-zonit-blue mr-3 text-lg"></i>
+                    <span class="text-sm font-semibold text-white">Seguridad Inteligente IA</span>
+                </div>
+            </div>
+            
+            <!-- Título principal ultra moderno -->
+            <h1 class="text-7xl md:text-9xl font-bold mb-16 animate-fade-in">
+                <span class="block text-white mb-4 opacity-90">PROTEGE</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue via-purple-500 to-cyan-400 text-glow mb-4">TU ESPACIO</span>
+                <span class="block text-white text-5xl md:text-6xl mt-6 font-light tracking-wider">CON INTELIGENCIA</span>
+            </h1>
+            
+            <!-- Descripción ultra moderna -->
+            <p class="text-2xl md:text-3xl mb-16 max-w-5xl mx-auto animate-slide-up text-gray-200 leading-relaxed">
+                Cámaras <span class="text-zonit-blue font-bold">HD 4K</span>, cerraduras <span class="text-purple-400 font-bold">biométricas</span>, sensores <span class="text-cyan-400 font-bold">inteligentes</span> y más. 
+                <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-purple-500 font-bold text-glow">Seguridad total</span> para tu hogar y negocio.
+            </p>
+            
+            <!-- Botones ultra modernos -->
+            <div class="flex flex-col md:flex-row gap-10 justify-center items-center mb-20">
+                <button class="btn-modern text-white px-16 py-8 rounded-2xl text-2xl font-bold animate-scale-in group shadow-2xl bg-gradient-to-r from-zonit-blue to-purple-600 hover:from-purple-600 hover:to-zonit-blue">
+                    <i class="fas fa-shield-alt mr-4 text-2xl"></i>
+                    Cotiza Gratis
+                    <i class="fas fa-arrow-right ml-4 text-2xl group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                
+                <div class="flex items-center text-white/90 hover:text-white transition-all duration-300 cursor-pointer group">
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-play text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-semibold">Ver Demo</span>
+                </div>
+            </div>
+            
+            <!-- Estadísticas ultra modernas -->
+            <div class="grid grid-cols-3 gap-16 max-w-4xl mx-auto">
+                <div class="text-center animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-zonit-blue to-cyan-400 mb-4 text-glow">1000+</div>
+                    <div class="text-lg text-gray-300 font-semibold">Sistemas Instalados</div>
+                    <div class="text-xs text-gray-400 mt-2">En Monterrey y área metropolitana</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4 text-glow">99.8%</div>
+                    <div class="text-lg text-gray-300 font-semibold">Tasa de Detección</div>
+                    <div class="text-xs text-gray-400 mt-2">Basado en 1000+ instalaciones</div>
+                </div>
+                <div class="text-center animate-fade-in" style="animation-delay: 0.7s;">
+                    <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 mb-4 text-glow">24/7</div>
+                    <div class="text-lg text-gray-300 font-semibold">Monitoreo Continuo</div>
+                    <div class="text-xs text-gray-400 mt-2">Respuesta en menos de 5 segundos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios de Seguridad -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-zonit-dark mb-4 scroll-reveal">
+                    Beneficios de la Seguridad Inteligente
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-reveal">
+                    Descubre cómo la tecnología de seguridad avanzada protege tu espacio con inteligencia artificial
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Columna 1 -->
+                <div class="space-y-8">
+                    <!-- Cámaras HD 4K -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-video text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Cámaras HD 4K Inteligentes</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Sistema de videovigilancia con cámaras HD 4K, visión nocturna, detección de movimiento 
+                                    inteligente y reconocimiento facial. Grabación en la nube con acceso remoto 24/7.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Resolución 4K Ultra HD</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Visión nocturna hasta 30m</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Detección de movimiento IA</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-zonit-blue">Grabación en la nube incluida</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cerraduras Biométricas -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-key text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Cerraduras Biométricas Avanzadas</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Cerraduras inteligentes con huella dactilar, reconocimiento facial, código PIN y 
+                                    control remoto. Acceso seguro sin llaves físicas, con registro de entradas y salidas.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Huella dactilar + reconocimiento facial</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Control remoto desde app</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Registro detallado de accesos</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-green-600">Hasta 100 usuarios por cerradura</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="space-y-8">
+                    <!-- Sensores Inteligentes -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-radar text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Sensores Inteligentes IA</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Sensores de movimiento PIR, sensores de apertura de puertas/ventanas, sensores de 
+                                    rotura de cristal y sensores de humo. Detección inteligente con falsas alarmas mínimas.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Detección de movimiento PIR</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Sensores de apertura magnéticos</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Detección de rotura de cristal</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-purple-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-purple-600">Reducción de 95% en falsas alarmas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Monitoreo 24/7 -->
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 scroll-reveal">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-zonit-blue rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <i class="fas fa-eye text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-zonit-dark mb-3">Monitoreo 24/7 Inteligente</h3>
+                                <p class="text-gray-600 mb-4 leading-relaxed">
+                                    Monitoreo continuo con alertas instantáneas por SMS, email y app. Integración con 
+                                    servicios de emergencia y respuesta automática ante incidentes de seguridad.
+                                </p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Alertas instantáneas por múltiples canales</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Integración con servicios de emergencia</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-check-circle text-zonit-blue mr-2"></i>
+                                        <span>Respuesta automática ante incidentes</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 p-3 bg-orange-50 rounded-lg">
+                                    <div class="text-sm font-semibold text-orange-600">Respuesta en menos de 30 segundos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estadísticas de Seguridad -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">1000+</div>
+                    <div class="text-gray-600 font-medium">Sistemas Instalados</div>
+                    <div class="text-xs text-gray-500 mt-1">En Monterrey y área metropolitana</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">99.8%</div>
+                    <div class="text-gray-600 font-medium">Tasa de Detección</div>
+                    <div class="text-xs text-gray-500 mt-1">Basado en 1000+ instalaciones</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">24/7</div>
+                    <div class="text-gray-600 font-medium">Monitoreo Continuo</div>
+                    <div class="text-xs text-gray-500 mt-1">Respuesta en menos de 5 segundos</div>
+                </div>
+                <div class="text-center scroll-reveal">
+                    <div class="text-4xl font-bold text-zonit-blue mb-2">7</div>
+                    <div class="text-gray-600 font-medium">Años de Experiencia</div>
+                    <div class="text-xs text-gray-500 mt-1">Especialistas certificados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zonit-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-zonit-blue mb-4">ZONIT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Líder en automatización inteligente para hogares y negocios en Monterrey.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-zonit-blue transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="domotica-casas.html" class="hover:text-zonit-blue transition-colors">Domótica para Casas</a></li>
+                        <li><a href="automatizacion-negocios.html" class="hover:text-zonit-blue transition-colors">Automatización de Negocios</a></li>
+                        <li><a href="camaras-cerraduras.html" class="hover:text-zonit-blue transition-colors">Cámaras y Cerraduras</a></li>
+                        <li><a href="integracion-alexa.html" class="hover:text-zonit-blue transition-colors">Integración Alexa/Google Home</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="nosotros.html" class="hover:text-zonit-blue transition-colors">Nosotros</a></li>
+                        <li><a href="proyectos.html" class="hover:text-zonit-blue transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="hover:text-zonit-blue transition-colors">Blog</a></li>
+                        <li><a href="contacto.html" class="hover:text-zonit-blue transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i>+52 81 1234 5678</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@zonit.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Monterrey, N.L.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Zonit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/528112345678" class="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Funcionalidad del dropdown mejorada
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const chevron = button.querySelector('.fa-chevron-down');
+            
+            // Mostrar dropdown al hacer hover
+            dropdown.addEventListener('mouseenter', () => {
+                menu.style.display = 'block';
+                chevron.style.transform = 'rotate(180deg)';
+            });
+            
+            // Ocultar dropdown al salir del hover
+            dropdown.addEventListener('mouseleave', () => {
+                menu.style.display = 'none';
+                chevron.style.transform = 'rotate(0deg)';
+            });
+            
+            // Funcionalidad para dispositivos móviles
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isVisible = menu.style.display === 'block';
+                menu.style.display = isVisible ? 'none' : 'block';
+                chevron.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Observer para scroll reveal
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html> 
