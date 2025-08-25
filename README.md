@@ -1,163 +1,114 @@
-# Zonit - Domótica y Automatización Inteligente
+# 🏠 ZONIT - Domótica Inteligente
 
-Sitio web profesional para **Zonit**, empresa especializada en domótica y automatización inteligente para hogares y negocios. Transformamos espacios en entornos inteligentes con dispositivos conectados y control total desde tu smartphone.
+> **Sitio web elegante y minimalista para servicios de domótica y automatización inteligente**
 
-## 🏗️ Estructura del Proyecto
+![Zonit Preview](https://img.shields.io/badge/ZONIT-Domótica%20Inteligente-blue?style=for-the-badge&logo=home)
+
+## ✨ Características
+
+- 🎨 **Diseño Minimalista y Elegante** - Interfaz moderna con efectos sutiles
+- 📱 **100% Responsivo** - Optimizado para todos los dispositivos
+- 🚀 **Performance Optimizada** - Carga rápida y experiencia fluida
+- 🎭 **Animaciones Suaves** - Transiciones elegantes y micro-interacciones
+- 🎯 **UX-First Design** - Enfoque en la experiencia del usuario
+
+## 🛠️ Tecnologías Utilizadas
+
+- **HTML5** - Estructura semántica y accesible
+- **CSS3** - Estilos modernos con TailwindCSS
+- **JavaScript** - Interactividad y animaciones
+- **TailwindCSS** - Framework CSS utility-first
+- **Font Awesome** - Iconografía profesional
+- **Google Fonts** - Tipografías elegantes (Montserrat, Poppins)
+
+## 🎨 Paleta de Colores
+
+```css
+--zonit-blue: #1e40af      /* Azul principal */
+--zonit-accent: #0ea5e9    /* Azul acento */
+--zonit-dark: #1e293b      /* Texto principal */
+--zonit-gray: #f8fafc      /* Fondos */
+--zonit-text: #475569      /* Texto secundario */
+```
+
+## 📁 Estructura del Proyecto
 
 ```
-Zonit/
-├── index.html                    # Página principal (Home)
-├── domotica-casas.html          # Domótica para hogares
-├── automatizacion-negocios.html  # Automatización para negocios
-├── camaras-cerraduras.html      # Seguridad inteligente
-├── integracion-alexa.html       # Integración con asistentes de voz
-└── README.md                    # Este archivo
+zonit/
+├── index.html              # Página principal
+├── domotica-casas.html     # Servicios de domótica
+├── automatizacion-negocios.html # Automatización empresarial
+├── camaras-cerraduras.html # Seguridad inteligente
+├── integracion-alexa.html  # Integración con Alexa
+├── styles.css              # Estilos personalizados
+├── vercel.json             # Configuración de Vercel
+└── README.md               # Documentación
 ```
 
-## 🎨 Características del Diseño
+## 🚀 Despliegue
 
-### Paleta de Colores
-- **Azul eléctrico**: `#0D6EFD` (tecnología y confianza)
-- **Gris oscuro**: `#1C1C1C` (elegancia y profesionalismo)
-- **Gris claro**: `#F8F9FA` (fondo limpio)
-- **Blanco**: `#FFFFFF`
+### GitHub
+```bash
+git clone https://github.com/NFTSkull/zonit.git
+cd zonit
+```
+
+### Vercel
+El sitio se despliega automáticamente en Vercel desde GitHub.
+
+## 🌟 Características del Diseño
+
+### Header Elegante
+- Navegación con efectos hover sutiles
+- Dropdown sofisticado con glassmorphism
+- Logo con gradientes y animaciones
+
+### Hero Section
+- Tipografía elegante y espaciado generoso
+- Efectos de spots minimalistas
+- Botones con transiciones fluidas
+
+### Secciones de Contenido
+- Cards con hover effects elegantes
+- Espaciado consistente y jerarquía visual clara
+- Iconografía profesional y descriptiva
+
+## 📱 Responsividad
+
+- **Mobile First** - Diseño optimizado para móviles
+- **Tablet** - Adaptación para pantallas medianas
+- **Desktop** - Experiencia completa en pantallas grandes
+
+## 🎯 Optimizaciones
+
+- **Performance** - CSS y JS optimizados
+- **SEO** - Meta tags y estructura semántica
+- **Accesibilidad** - Navegación por teclado y screen readers
+- **Seguridad** - Headers de seguridad en Vercel
+
+## 🔧 Personalización
+
+### Colores
+Modifica la paleta en `styles.css` o en la configuración de TailwindCSS.
 
 ### Tipografías
-- **Montserrat**: Fuente principal
-- **Poppins**: Fuente secundaria
+Cambia las fuentes en el `<head>` del HTML.
 
-## 📄 Páginas Creadas
+### Animaciones
+Ajusta las duraciones y easing en `styles.css`.
 
-### 1. Página Principal (`index.html`)
-- **Hero Section**: "Convierte tu hogar en una casa inteligente desde hoy"
-- **Beneficios**: Seguridad, Ahorro de Energía, Comodidad, Control Total
-- **Cómo Funciona**: 3 pasos simples (Cotización → Instalación → Control desde celular)
-- **Servicios**: Domótica para Casas, Automatización de Negocios, Cámaras y Cerraduras, Integración Alexa/Google
-- **Testimonios**: Casos de éxito de clientes
-- **Footer**: Información de contacto y enlaces
+## 📞 Contacto
 
-### 2. Domótica para Casas (`domotica-casas.html`)
-- **Hero Section**: Enfoque en hogares inteligentes
-- **Dispositivos**: Luces Inteligentes, Termostatos, Sistema de Seguridad
-- **Beneficios**: Ahorro Energético, Seguridad Mejorada, Máxima Comodidad
-- **Por qué Zonit**: Instalación profesional, soporte 24/7, garantía
+- **GitHub**: [@NFTSkull](https://github.com/NFTSkull)
+- **Proyecto**: [Zonit Repository](https://github.com/NFTSkull/zonit)
 
-## 🧭 Navegación
+## 📄 Licencia
 
-### Header
-- **Logo**: ZONIT (enlace a home)
-- **Menú principal**:
-  - Inicio
-  - Servicios (dropdown con 4 subpáginas)
-  - Proyectos
-  - Blog
-  - Nosotros
-  - Contacto
-- **Botón CTA**: "Cotiza Gratis"
-
-### Dropdown de Servicios
-1. **Domótica para Casas** - Transforma tu hogar en inteligente
-2. **Automatización de Negocios** - Optimiza tu negocio con tecnología
-3. **Cámaras y Cerraduras Inteligentes** - Seguridad avanzada
-4. **Integración Alexa/Google Home** - Controla todo con tu voz
-
-## ⚡ Características Técnicas
-
-### Tecnologías Utilizadas
-- **HTML5**: Estructura semántica
-- **TailwindCSS**: Framework de CSS utilitario
-- **Font Awesome**: Iconografía
-- **Google Fonts**: Tipografías web
-- **JavaScript**: Animaciones y interactividad
-
-### Funcionalidades
-- **Responsive Design**: Adaptable a todos los dispositivos
-- **Animaciones suaves**: Efectos de aparición al hacer scroll
-- **WhatsApp flotante**: Botón de contacto directo
-- **SEO optimizado**: Meta tags y estructura semántica
-- **Navegación fluida**: Smooth scrolling entre secciones
-
-### Optimizaciones SEO
-- Meta descriptions específicas para cada página
-- Keywords relevantes para búsquedas locales
-- Estructura de headings jerárquica
-- URLs amigables para SEO
-
-## 🚀 Cómo Usar
-
-### Para Ver el Sitio
-1. Abre `index.html` en tu navegador
-2. Navega por las diferentes secciones
-3. Prueba los enlaces entre páginas
-
-### Para Desarrollar
-1. Cada página es independiente y completa
-2. Los estilos están en línea para facilitar la edición
-3. Las imágenes son de Unsplash (placeholder)
-4. Los enlaces de WhatsApp están configurados con un número de ejemplo
-
-### Para Personalizar
-1. **Colores**: Modifica las variables en `tailwind.config`
-2. **Contenido**: Edita el texto directamente en los archivos HTML
-3. **Imágenes**: Reemplaza las URLs de Unsplash con tus propias imágenes
-4. **Contacto**: Actualiza el número de WhatsApp y datos de contacto
-
-## 📱 Responsive Design
-
-El sitio está optimizado para:
-- **Desktop**: 1024px y superior
-- **Tablet**: 768px - 1023px
-- **Mobile**: 320px - 767px
-
-## 🔧 Próximos Pasos Sugeridos
-
-1. **Crear las páginas faltantes**:
-   - `automatizacion-negocios.html`
-   - `camaras-cerraduras.html`
-   - `integracion-alexa.html`
-   - `nosotros.html`
-   - `proyectos.html`
-   - `blog.html`
-   - `contacto.html`
-
-2. **Integrar formularios**:
-   - Formulario de contacto
-   - Formulario de cotización
-   - Newsletter
-
-3. **Optimizar para producción**:
-   - Comprimir imágenes
-   - Minificar CSS/JS
-   - Configurar hosting
-
-4. **Agregar funcionalidades**:
-   - Menú móvil funcional
-   - Galería de proyectos interactiva
-   - Blog con CMS
-   - Tienda online (opcional)
-
-## 🎯 Enfoque del Negocio
-
-### Servicios Principales
-- **Domótica para casas**: Luces, termostatos, cámaras, cerraduras inteligentes
-- **Automatización de negocios**: Control de iluminación, seguridad, acceso
-- **Integración con asistentes de voz**: Alexa, Google Home, Siri
-- **Dispositivos inteligentes**: Instalación y configuración profesional
-
-### Beneficios Clave
-- **Seguridad**: Monitoreo 24/7 desde cualquier lugar
-- **Ahorro de Energía**: Hasta 30% de reducción en consumo
-- **Comodidad**: Control total desde smartphone o voz
-- **Control Total**: Una app para gestionar todo
-
-## 📞 Información de Contacto
-
-- **Teléfono**: +52 81 1234 5678
-- **Email**: info@zonit.com
-- **Ubicación**: Monterrey, N.L.
-- **WhatsApp**: [Enlace configurado en el sitio]
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
 ---
 
-**Desarrollado con ❤️ para Zonit**
-*Transformando hogares y negocios en espacios inteligentes* 
+<div align="center">
+  <p>Hecho con ❤️ para Zonit</p>
+  <p>Domótica Inteligente del Futuro</p>
+</div> 
