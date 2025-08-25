@@ -1,3 +1,198 @@
+/* Elementos de Inteligencia Artificial del Hero */
+.intelligence-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Red Neuronal Flotante */
+.neural-network {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+}
+
+.neural-node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(30, 64, 175, 0.6);
+    border-radius: 50%;
+    animation: neuralFloat 8s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4);
+}
+
+.neural-node:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.neural-node:nth-child(2) { top: 30%; right: 25%; animation-delay: 0.2s; }
+.neural-node:nth-child(3) { top: 50%; left: 15%; animation-delay: 0.4s; }
+.neural-node:nth-child(4) { top: 60%; right: 35%; animation-delay: 0.6s; }
+.neural-node:nth-child(5) { bottom: 25%; left: 30%; animation-delay: 0.8s; }
+.neural-node:nth-child(6) { bottom: 35%; right: 20%; animation-delay: 1.0s; }
+.neural-node:nth-child(7) { top: 40%; left: 50%; animation-delay: 1.2s; }
+.neural-node:nth-child(8) { top: 70%; right: 50%; animation-delay: 1.4s; }
+.neural-node:nth-child(9) { bottom: 45%; left: 50%; animation-delay: 1.6s; }
+.neural-node:nth-child(10) { top: 80%; left: 40%; animation-delay: 1.8s; }
+
+@keyframes neuralFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Código Binario Flotante */
+.binary-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.binary-line {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: rgba(30, 64, 175, 0.3);
+    white-space: nowrap;
+    animation: binaryFloat 12s linear infinite;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.binary-line:nth-child(1) { top: 15%; left: -200px; animation-delay: 0s; }
+.binary-line:nth-child(2) { top: 25%; right: -200px; animation-delay: 2s; }
+.binary-line:nth-child(3) { top: 75%; left: -200px; animation-delay: 4s; }
+.binary-line:nth-child(4) { top: 85%; right: -200px; animation-delay: 6s; }
+.binary-line:nth-child(5) { top: 45%; left: -200px; animation-delay: 8s; }
+
+@keyframes binaryFloat {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Partículas de Energía Inteligente */
+.energy-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.energy-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.8), transparent);
+    border-radius: 50%;
+    animation: energyPulse 6s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+}
+
+.energy-particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.energy-particle:nth-child(2) { top: 40%; right: 15%; animation-delay: 0.3s; }
+.energy-particle:nth-child(3) { top: 60%; left: 20%; animation-delay: 0.6s; }
+.energy-particle:nth-child(4) { top: 80%; right: 25%; animation-delay: 0.9s; }
+.energy-particle:nth-child(5) { bottom: 30%; left: 15%; animation-delay: 1.2s; }
+.energy-particle:nth-child(6) { bottom: 50%; right: 20%; animation-delay: 1.5s; }
+
+@keyframes energyPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* Líneas de Conexión Inteligente */
+.intelligence-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intelligence-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.1), transparent);
+    animation: intelligenceLineFloat 15s ease-in-out infinite;
+}
+
+.intelligence-line[data-orientation="horizontal"] {
+    width: 300px;
+    height: 1px;
+    top: 30%;
+    left: -300px;
+    animation-delay: 0s;
+}
+
+.intelligence-line[data-orientation="vertical"] {
+    width: 1px;
+    height: 200px;
+    top: -200px;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+.intelligence-line[data-orientation="diagonal"] {
+    width: 250px;
+    height: 1px;
+    top: 70%;
+    left: -250px;
+    transform: rotate(45deg);
+    animation-delay: 6s;
+}
+
+.intelligence-line[data-orientation="curve"] {
+    width: 200px;
+    height: 1px;
+    bottom: 20%;
+    right: -200px;
+    animation-delay: 9s;
+}
+
+@keyframes intelligenceLineFloat {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(500px) rotate(0deg);
+        opacity: 0;
+    }
+}
+
 /* Estilos Elegantes del Header */
 .nav-elegant {
     position: relative;
